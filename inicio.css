@@ -1,0 +1,129 @@
+#inicio {
+    background: rgb(227,217,221);
+    background: radial-gradient(circle, rgba(227,217,221,1) 0%, rgba(4,53,111,1) 97%);
+    text-align: center;
+    
+}
+
+img {
+    width: 130px;
+    text-align: center;
+} 
+
+.tit {
+    margin-top: 120px;
+    text-align: center;
+}
+
+h1 {
+    font: 600 50px 'Poppins', sans-serif;
+    color: white;
+    /* border-bottom: rgba(255, 255, 255, 0.432) 1px solid; */
+    margin-bottom: 35px;
+}
+
+.linha {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 45px;
+    background-color: white;
+    width: 500px;
+    height: 2px;
+}
+
+.ei {
+    color: rgb(5, 5, 54);
+}
+
+button {
+    
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(244, 95%, 15%) 0%,
+       hsl(241, 61%, 31%) 8%,
+       hsl(239, 35%, 24%) 92%,
+       hsl(249, 97%, 14%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 17px 50px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    color: white;
+    background: hsl(229, 77%, 42%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }
